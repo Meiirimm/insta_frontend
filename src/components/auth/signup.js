@@ -1,9 +1,9 @@
 'use client'
 import Image from "next/image"
-import logo from "../../../app/images/logo.svg"
+import logo from "../../app/images/logo.svg"
 
 
-export default function UserLogin () {
+export default function UserSignup () {
 
     return (
         <section className="login-page">
