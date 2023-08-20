@@ -1,0 +1,11 @@
+.button{
+    height: 35px;
+    border-radius: 8px;
+    padding: 0 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #0095F6;
+    color: #fff;
+    transition: 0.5s;
+}

@@ -1,0 +1,105 @@
+.login-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #737373;
+}
+
+.login-page .card{
+    gap: 15px;
+}
+
+.login-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-header h2 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.facebook-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.facebook-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('../../images/facebook.svg'); 
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.facebook-text {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.facebook-button:hover {
+    background-color: #1265bf;
+}
+
+.divider{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.divider-line{
+    flex: 1;
+    height: 1px;
+    border: 1px solid #DBDBDB;
+}
+
+.divider-text{
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 15px;
+}
+
+.registration-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.text-block p{
+    font-size: 12px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.text-block a {
+    color: #00376B;
+    text-decoration: none;
+}
+
+
+.login-page button{
+    width: 100%;
+}
+
+.login-page .card:last-child{
+    padding: 20px 40px;
+}
+
+.login-alternative h3{
+    font-size: 14px;
+    color: #000;
+}
+
+.login-alternative a {
+    color: #0095f6;
+    text-decoration: none;
+}

@@ -1,10 +1,11 @@
 import Test from '../components/test'
+import UserLogin from '../components/auth/user/index'
 
 export default function Home() {
   return (
     <main >
-      Hello Decode
-      <Test />
+      <UserLogin />
+      {/* <Test /> */}
     </main>
   )
 }
