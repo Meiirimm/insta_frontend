@@ -1,5 +1,7 @@
 'use client'
 import Image from "next/image"
+import Link from "next/link"
+
 import logo from "../../app/images/logo.svg"
 
 
@@ -35,7 +37,9 @@ export default function UserSignup () {
             </div>
             <div className="card">
             <div className="login-alternative">
-                <h3>Есть аккаунт? <a>Вход</a></h3>
+                <h3>Есть аккаунт? 
+                    <Link href="/login" className="link-style">Вход</Link>
+                </h3>
             </div>
             </div>
         </section>

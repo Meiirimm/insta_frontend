@@ -1,5 +1,7 @@
 'use client'
 import Image from "next/image"
+import Link from "next/link"
+
 import logo from "../../app/images/logo.svg"
 import search from "../../app/images/search.svg"
 import home from "../../app/images/home.svg"
@@ -17,19 +19,25 @@ export default function Header () {
             <div className="container">
                 <div className="header-inner">
                     <div className="header-logo">
-                        <Image src={logo} alt="Logo" />
+                        <Link href="/">
+                            <Image src={logo} alt="Logo" />
+                        </Link>
                     </div>
                     <div className="header-search">
                         <Image src={search} alt="search" />
                         <p>Search</p>
                     </div> 
                     <div className="header-item">
-                        <Image src={home} alt="search" className="image" />
-                        <Image src={mess} alt="search" className="image" />
-                        <Image src={newpost} alt="search" className="image" />
-                        <Image src={inter} alt="search" className="image" />
-                        <Image src={like} alt="search" className="image" />
-                        <Image src={profpic} alt="search" className="image" />
+                        <Link href="/">
+                            <Image src={home} alt="icon" className="image" />
+                        </Link>
+                        <Image src={mess} alt="icon" className="image" />
+                        <Image src={newpost} alt="icon" className="image" />
+                        <Image src={inter} alt="icon" className="image" />
+                        <Image src={like} alt="icon" className="image" />
+                        <Link href="/profile">
+                            <Image src={profpic} alt="profpic" className="image" />
+                        </Link>
                     </div>
                 </div>
             </div>
