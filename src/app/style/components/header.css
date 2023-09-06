@@ -32,3 +32,10 @@
 .header-item .image{
     margin-left: 15px;
 }
+
+.newpost{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+}

@@ -1,4 +1,6 @@
 'use client'
+
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -13,8 +15,15 @@ import profpic from "../../app/images/profpic.svg"
 
 
 
-export default function Header () {
+export default function Header ({ setStep }) {
+
+    const openModal = () => {
+        setStep(2); // Обновляем состояние step при нажатии кнопки
+      };
+    
+
     return (
+        
         <header className="header">
             <div className="container">
                 <div className="header-inner">
@@ -32,7 +41,7 @@ export default function Header () {
                             <Image src={home} alt="icon" className="image" />
                         </Link>
                         <Image src={mess} alt="icon" className="image" />
-                        <Image src={newpost} alt="icon" className="image" />
+                        <button className="newpost" onClick={openModal}><Image src={newpost} alt="icon" className="image" /></button>
                         <Image src={inter} alt="icon" className="image" />
                         <Image src={like} alt="icon" className="image" />
                         <Link href="/profile">

@@ -1,13 +1,18 @@
 'use client'
+import { useState } from "react"
+
 import Image from "next/image"
 import icon from "../images/icon.png"
 import profpic from "../images/Profile.png"
 import postIcon from "../images/post-Icon.png"
 import Posts from '@/components/posts'
 import Header from '@/components/header'
+import CreatePost from "@/components/create-post"
 
 
 export default function ProfilePage() {
+    const [step, setStep] = useState(1);
+
   const posts = [
     {
         image: "/images/Post.png",
@@ -29,7 +34,8 @@ export default function ProfilePage() {
 
   return (
     <main>
-      <Header />
+      <Header setStep={setStep} />
+      <CreatePost step={step} setStep={setStep}/>
       <section>
             <div className="container">
                 <div className="profile-head">
