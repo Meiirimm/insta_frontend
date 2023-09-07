@@ -2,15 +2,23 @@
 import { useState } from 'react';
 import Test from '../components/test'
 import Header from '../components/header'
-import CreatePost from '@/components/create-post';
+import ModalCreatePost from '@/components/modalCreatePost';
 
 export default function Home() {
-  const [step, setStep] = useState(1);
+  const [modalCreatePostIsOpen, setModalCreatePostIsOpen] = useState(false)
+
+  const  closeModalCreatePost = () => {
+      setModalCreatePostIsOpen(false)
+  }
+
+  const openModalCreatePost = () => {
+      setModalCreatePostIsOpen(true);
+    };
 
   return (
     <main >
-      <Header setStep={setStep} />
-      <CreatePost step={step} setStep={setStep}/>
+      <Header openModal={openModalCreatePost} />
+      {modalCreatePostIsOpen && <ModalCreatePost close={closeModalCreatePost}/>}
 
     </main>
   )

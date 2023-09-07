@@ -15,12 +15,7 @@ import profpic from "../../app/images/profpic.svg"
 
 
 
-export default function Header ({ setStep }) {
-
-    const openModal = () => {
-        setStep(2); // Обновляем состояние step при нажатии кнопки
-      };
-    
+export default function Header ({openModal}) {
 
     return (
         

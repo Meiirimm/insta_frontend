@@ -7,11 +7,20 @@ import profpic from "../images/Profile.png"
 import postIcon from "../images/post-Icon.png"
 import Posts from '@/components/posts'
 import Header from '@/components/header'
-import CreatePost from "@/components/create-post"
+import ModalCreatePost from "@/components/modalCreatePost"
 
 
 export default function ProfilePage() {
-    const [step, setStep] = useState(1);
+    const [modalCreatePostIsOpen, setModalCreatePostIsOpen] = useState(false)
+
+    const  closeModalCreatePost = () => {
+        setModalCreatePostIsOpen(false)
+    }
+  
+    const openModalCreatePost = () => {
+        setModalCreatePostIsOpen(true);
+      };
+      
 
   const posts = [
     {
@@ -34,9 +43,9 @@ export default function ProfilePage() {
 
   return (
     <main>
-      <Header setStep={setStep} />
-      <CreatePost step={step} setStep={setStep}/>
-      <section>
+        <Header openModal={openModalCreatePost} />
+        {modalCreatePostIsOpen && <ModalCreatePost close={closeModalCreatePost}/>}
+        <section>
             <div className="container">
                 <div className="profile-head">
                     <div className="profile-head-item">
