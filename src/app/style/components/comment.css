@@ -1,0 +1,111 @@
+.comments-section{
+    height: 80%;
+    border-bottom: 1px solid #DBDBDB;
+    overflow-y: auto;
+}
+
+.comment-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 15px;
+}
+
+.comment-item div:last-child img{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.com-author{
+    align-items: start;
+}
+
+.com-author p{
+    font-size: 14px;
+}
+
+.post-header-author h3{
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.post-actions{
+    border-bottom: 1px solid #DBDBDB;
+    padding: 15px 20px;
+}
+
+.post-actions-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.post-actions-item img,
+.write-comment img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.post-actions p{
+    text-align: start;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.write-comment{
+    padding: 15px 20px;
+}
+
+.write-comment form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.write-comment button{
+    border: none;
+    background-color: transparent;
+    color: #0095F6;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.write-comment-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.write-comment-item input{
+    outline: none;
+    width: 100%;
+    border: none;
+}
+
+.comment-item > div:nth-child(2) {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+.com-content-item{
+    display: flex;
+    gap: 10px;
+}
+
+.com-content span{
+    font-size: 12px;
+    color: #737373;
+    cursor: pointer;
+}
+
+.com-item-action span:first-child{
+    margin-right: 10px;
+}

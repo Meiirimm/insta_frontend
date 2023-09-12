@@ -2,16 +2,20 @@
 import { useState } from "react"
 
 import Image from "next/image"
-import icon from "../images/icon.png"
-import profpic from "../images/Profile.png"
-import postIcon from "../images/post-Icon.png"
+import icon from "../images/more.png"
+import profpic from "../images/profpic.jpg"
+import postIcon from "../images/posticon.png"
 import Posts from '@/components/posts'
-import Header from '@/components/header'
+import Header from '@/components/header1'
 import ModalCreatePost from "@/components/modalCreatePost"
+import ModalPost from "@/components/modalPost"
 
 
 export default function ProfilePage() {
     const [modalCreatePostIsOpen, setModalCreatePostIsOpen] = useState(false)
+    const [modalPostIsOpen, setModalPostIsOpen] = useState(false);
+    const [postImage, setPostImage] = useState(""); 
+
 
     const  closeModalCreatePost = () => {
         setModalCreatePostIsOpen(false)
@@ -19,33 +23,50 @@ export default function ProfilePage() {
   
     const openModalCreatePost = () => {
         setModalCreatePostIsOpen(true);
-      };
+    };
+
+    const openModalPost = (postImage) => {
+        setModalPostIsOpen(true);
+        setPostImage(postImage); 
+    };
+    
+    const closeModalPost = () => {
+        setModalPostIsOpen(false);
+    };
       
 
   const posts = [
     {
-        image: "/images/Post.png",
+        image: "/images/1.jpg",
     },
     {
-        image: "/images/Post1.png",
+        image: "/images/2.jpg",
     },
     {
-        image: "/images/Post2.png",
+        image: "/images/3.jpg",
     },
     {
-        image: "/images/Post3.png",
+        image: "/images/4.jpg",
     },
     {
-        image: "/images/Post.png",
+        image: "/images/5.jpg",
     },
-
+    {
+        image: "/images/6.jpg",
+    },
+    {
+        image: "/images/7.jpg",
+    },
   ]
+  
 
   return (
-    <main>
+    <main className="main">
         <Header openModal={openModalCreatePost} />
         {modalCreatePostIsOpen && <ModalCreatePost close={closeModalCreatePost}/>}
-        <section>
+        {modalPostIsOpen && <ModalPost close={closeModalPost} postImage={postImage} />}
+
+        <section className="main-content">
             <div className="container">
                 <div className="profile-head">
                     <div className="profile-head-item">
@@ -53,17 +74,17 @@ export default function ProfilePage() {
                     </div>
                     <div className="profile-head-item">
                         <div className="profile-head-left">
-                            <h2>terrylucas</h2>
-                            <button className="button">Follow</button>
+                            <h2>yawnzzn</h2>
+                            <button className="button">Подписаться</button>
                             <Image src={icon} alt="Logo" />
                         </div>
                         <div className="profile-head-left">
-                            <a><span>1.258</span> posts</a>
-                            <a><span>4M</span> followers</a>
-                            <a><span>1.250</span> following</a>
+                            <a><span>7</span> публикаций</a>
+                            <a><span>16 млн</span> подписчиков</a>
+                            <a><span>2</span> подписок</a>
                         </div>
                         <div className="profile-head-left">
-                            <h3>Terry Lucas</h3>
+                            <h3>YEONJUN</h3>
                         </div>
                     </div>
                 </div>
@@ -71,10 +92,10 @@ export default function ProfilePage() {
                     <div className="post-head">
                         <a>
                             <Image src={postIcon} alt="post"/>
-                            <span>POSTS</span>
+                            <span>ПУБЛИКАЦИИ</span>
                         </a>
                     </div>
-                    <Posts posts={posts}/>
+                    <Posts posts={posts} openModalPost={(postImage) => openModalPost(postImage)} />
                 </div>
             </div>
         </section>

@@ -4,7 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 
-import logo from "../../app/images/logo.svg"
+import logo from "../../app/images/instalogo.png"
 import search from "../../app/images/search.svg"
 import home from "../../app/images/home.svg"
 import mess from "../../app/images/mess.svg"

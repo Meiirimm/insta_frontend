@@ -132,3 +132,19 @@ table {
 .mtb7{
     padding: 40px 0;
 }
+
+.main{
+    display: flex;
+    width: 100%;
+}
+
+.main-content {
+    margin-left: 20%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    padding: 30px 10%;
+}
